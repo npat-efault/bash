@@ -17,3 +17,9 @@ alias ll='ls -l'
 alias la='ls -a'
 alias lla='ls -la'
 alias l='ls'
+
+# Disable pager for "dumb" terminals (e.g. emacs shell)
+if [ x"$TERM" = x"dumb" ]; then
+  PAGER=cat
+  export PAGER
+fi
