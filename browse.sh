@@ -21,7 +21,7 @@ else
 fi
 
 if [ -n "$BROWSER" ]; then
-    browser="$browser"
+    browser="$BROWSER"
 else
     browser="sensible-browser"
 fi
