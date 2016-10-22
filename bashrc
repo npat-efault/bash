@@ -23,3 +23,17 @@ if [ x"$TERM" = x"dumb" ]; then
   PAGER=cat
   export PAGER
 fi
+
+if [ -x "$HOME"/bin/em ]; then
+  EDITOR=em
+  export EDITOR
+fi
+
+if [ -x /usr/bin/chromium-browser ]; then
+  BROWSER=/usr/bin/chromium-browser
+elif [ -x /usr/bin/google-chrome ]; then
+  BROWSER=/usr/bin/google-chrome
+elif [ -x /usr/bin/x-www-browser ]; then
+  BROWSER=/usr/bin/x-www-browser
+fi
+export BROWSER
